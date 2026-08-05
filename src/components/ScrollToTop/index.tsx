@@ -6,9 +6,13 @@ export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   const scrollToTop = () => {
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: reducedMotion ? 'auto' : 'smooth',
     });
   };
 
@@ -29,7 +33,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className='bg-purple fixed right-8 bottom-8 size-10 place-items-center rounded-sm text-white shadow-md transition-opacity duration-300 hover:opacity-70'
+      className='wave-button focus-ring fixed right-8 bottom-8 size-10 place-items-center rounded-full bg-blue-500 text-white shadow-glass hover:opacity-70'
       style={{
         display: isVisible ? 'grid' : 'none',
       }}

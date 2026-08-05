@@ -17,7 +17,7 @@ const SectionTitle = ({
   return (
     <div className="wow fadeInUp relative z-10 mb-16 text-center">
       <span className="hero-subtitle-gradient relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium">
-        <Image src={icon} alt="icon" width={16} height={16} />
+        <Image src={icon} alt="" width={16} height={16} />
 
         <span className="hero-subtitle-text"> {subTitle} </span>
       </span>

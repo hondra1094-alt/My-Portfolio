@@ -20,12 +20,18 @@ const Breadcrumb = ({ pageTitle }: { pageTitle: string }) => {
         <h1 className="mb-5.5 text-heading-2 font-extrabold text-white">
           {pageTitle}
         </h1>
-        <ul className="flex items-center justify-center gap-2">
-          <li className="font-medium">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="font-medium">/ {pageTitle}</li>
-        </ul>
+        <nav aria-label="Breadcrumb">
+          <ul className="flex items-center justify-center gap-2">
+            <li className="font-medium">
+              <Link href="/" className="focus-ring rounded-md">
+                Home
+              </Link>
+            </li>
+            <li className="font-medium" aria-current="page">
+              / {pageTitle}
+            </li>
+          </ul>
+        </nav>
       </div>
     </section>
   );

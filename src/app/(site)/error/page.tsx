@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Error | AI Tool - Next.js Template for AI Tools",
-  description: "This is Error page for AI Tool",
+  title: "Page Not Found | Portfolio",
+  description: "The page you're looking for doesn't exist.",
   // other metadata
 };
 
@@ -21,7 +21,7 @@ const ErrorPage = () => {
           data-wow-delay="0.1s"
         >
           <div className="relative mx-auto mb-12.5 aspect-191/143 w-full max-w-[382px]">
-            <Image src="/images/404.svg" alt="404" fill />
+            <Image src="/images/404.svg" alt="" fill />
           </div>
           <h2 className="mb-5.5 text-heading-3 font-bold text-white">
             Oops! Page Not Found.
@@ -32,7 +32,7 @@ const ErrorPage = () => {
           </p>
           <Link
             href="/"
-            className="hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80"
+            className="hero-button-gradient wave-button focus-ring inline-flex rounded-lg px-7 py-3 font-medium text-white hover:opacity-80"
           >
             Go To Home
           </Link>

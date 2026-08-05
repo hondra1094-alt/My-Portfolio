@@ -17,29 +17,29 @@ const FeaturesList = () => {
                       <span className="hero-subtitle-gradient relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium">
                         <Image
                           src="/images/hero/icon-title.svg"
-                          alt="icon"
+                          alt=""
                           width={16}
                           height={16}
                         />
 
                         <span className="hero-subtitle-text">
-                          Kickstart your AI Startup
+                          How I Work
                         </span>
                       </span>
                       <h3 className="mb-4.5 text-heading-4 font-bold text-white">
-                        Seamless OpenAI Integration
+                        End-to-End Product Development
                       </h3>
                       <p className="mb-10 font-medium">
-                        Build SaaS AI applications using OpenAI and Next.js,
-                        this kit comes with pre-configured and pre-built
-                        examples, making it easier to quickly kickstart your AI
-                        startup.
+                        I like owning a feature from idea through deployment —
+                        data modeling, API design, UI, and everything in
+                        between — rather than working in just one layer of the
+                        stack.
                       </p>
                       <Link
-                        href="/#"
-                        className="features-button-gradient relative inline-flex items-center gap-1.5 rounded-full px-6 py-3 text-sm text-white duration-300 ease-in hover:shadow-button"
+                        href="/projects"
+                        className="features-button-gradient wave-button focus-ring relative inline-flex items-center gap-1.5 rounded-full px-6 py-3 text-sm text-white hover:shadow-button"
                       >
-                        Learn more
+                        View projects
                         <svg
                           width="14"
                           height="12"
@@ -58,7 +58,7 @@ const FeaturesList = () => {
                     <div className="relative hidden aspect-square w-full max-w-[428px] sm:block">
                       <Image
                         src="/images/features/big-icon.svg"
-                        alt="icon"
+                        alt=""
                         fill
                       />
                     </div>
@@ -69,7 +69,7 @@ const FeaturesList = () => {
                     <span className="absolute bottom-0 right-0">
                       <Image
                         src="/images/features/shape-01.png"
-                        alt="shape"
+                        alt=""
                         width={282}
                         height={226}
                       />
@@ -77,14 +77,14 @@ const FeaturesList = () => {
                     <span className="absolute left-0 top-0 aspect-1170/192 w-full">
                       <Image
                         src="/images/features/shape-02.svg"
-                        alt="shape"
+                        alt=""
                         fill
                       />
                     </span>
                     <span className="absolute bottom-0 left-1/2 h-full w-full -translate-x-1/2">
                       <Image
                         src="/images/blur/blur-03.svg"
-                        alt="blur-sm"
+                        alt=""
                         fill
                         className="max-w-none"
                       />
@@ -92,7 +92,7 @@ const FeaturesList = () => {
                     <span className="absolute bottom-0 left-1/2 h-full w-full -translate-x-1/2">
                       <Image
                         src="/images/blur/blur-04.svg"
-                        alt="blur-sm"
+                        alt=""
                         fill
                         className="max-w-none"
                       />
@@ -100,7 +100,7 @@ const FeaturesList = () => {
                     <span className="absolute bottom-0 left-1/2 aspect-530/270 w-full max-w-[530px] -translate-x-1/2">
                       <Image
                         src="/images/blur/blur-05.svg"
-                        alt="blur-sm"
+                        alt=""
                         fill
                         className="max-w-none"
                       />
@@ -108,7 +108,7 @@ const FeaturesList = () => {
                     <span className="absolute right-0 top-0 aspect-580/430 w-full max-w-[580px]">
                       <Image
                         src="/images/features/shape-03.svg"
-                        alt="shape"
+                        alt=""
                         fill
                         className="max-w-none"
                       />
@@ -128,19 +128,18 @@ const FeaturesList = () => {
                     <span className="icon-border relative mx-auto mb-13.5 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
                       <Image
                         src="/images/features/icon-05.svg"
-                        alt="icon"
+                        alt=""
                         width={32}
                         height={32}
                       />
                     </span>
 
                     <h3 className="mb-4.5 text-heading-6 font-semibold text-white">
-                      All Essential SaaS Pages
+                      Clean, Maintainable Code
                     </h3>
                     <p className="font-medium">
-                      Build SaaS AI applications using OpenAI and Next.js, this
-                      kit comes with pre-configured and pre-built examples,
-                      making it easier to quickly kickstart.
+                      Modular, well-typed code that's easy for the next
+                      person — often future me — to read and extend.
                     </p>
                   </div>
 
@@ -153,7 +152,7 @@ const FeaturesList = () => {
                     <span className="absolute right-[16%] top-[16%]">
                       <Image
                         src="/images/features/shape-04.svg"
-                        alt="shape"
+                        alt=""
                         width={250}
                         height={135}
                       />
@@ -161,7 +160,7 @@ const FeaturesList = () => {
                     <span className="absolute bottom-0 left-0 aspect-521/335 w-full max-w-[521px]">
                       <Image
                         src="/images/blur/blur-08.svg"
-                        alt="blur-sm"
+                        alt=""
                         fill
                         className="max-w-none"
                       />
@@ -169,7 +168,7 @@ const FeaturesList = () => {
                     <span className="absolute bottom-0 left-0 aspect-287/256 w-full max-w-[287px]">
                       <Image
                         src="/images/blur/blur-09.svg"
-                        alt="blur-sm"
+                        alt=""
                         fill
                         className="max-w-none"
                       />
@@ -189,18 +188,18 @@ const FeaturesList = () => {
                     <span className="icon-border relative mx-auto mb-13.5 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
                       <Image
                         src="/images/features/icon-07.svg"
-                        alt="icon"
+                        alt=""
                         width={32}
                         height={32}
                       />
                     </span>
 
                     <h3 className="mb-4.5 text-heading-6 font-semibold text-white">
-                      Highly Customizable
+                      Fast &amp; Accessible by Default
                     </h3>
                     <p className="font-medium">
-                      Build SaaS AI applications using OpenAI and Next.js,
-                      quickly kickstart your AI startup.
+                      Performance and accessibility treated as requirements,
+                      not afterthoughts.
                     </p>
                   </div>
 
@@ -209,7 +208,7 @@ const FeaturesList = () => {
                     <span className="absolute right-[14%] top-[17%]">
                       <Image
                         src="/images/features/shape-05.svg"
-                        alt="shape"
+                        alt=""
                         width={178}
                         height={102}
                       />
@@ -220,7 +219,7 @@ const FeaturesList = () => {
                     <span className="absolute right-0 top-0 aspect-394/336 w-full max-w-[394px]">
                       <Image
                         src="/images/blur/blur-11.svg"
-                        alt="blur-sm"
+                        alt=""
                         fill
                         className="max-w-none"
                       />
@@ -228,7 +227,7 @@ const FeaturesList = () => {
                     <span className="absolute right-0 top-0">
                       <Image
                         src="/images/blur/blur-12.svg"
-                        alt="blur-sm"
+                        alt=""
                         className="max-w-none"
                         width={160}
                         height={303}

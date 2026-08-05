@@ -1,14 +1,15 @@
 import '@/styles/animate.css';
-import '@/styles/prism-vsc-dark-plus.css';
 import '@/styles/star.css';
 import '@/styles/tailwind.css';
 
+import BackgroundVideo from '@/components/Common/BackgroundVideo';
+import PageTransition from '@/components/Common/PageTransition';
+import SubmarineCursor from '@/components/Common/SubmarineCursor';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
-import AuthProvider from '../context/AuthContext';
 import ToasterContext from '../context/ToastContext';
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -25,23 +26,26 @@ export default function RootLayout({
     <html lang='en' className={plusJakarta.className}>
       <body>
         <div className='isolate'>
+          <BackgroundVideo />
+
           <NextTopLoader
-            color='#8646F4'
+            color='#3b82f6'
             crawlSpeed={300}
             showSpinner={false}
             shadow='none'
           />
 
-          <AuthProvider>
-            <Header />
-            {children}
-            <Footer />
+          <Header />
+          <main>
+            <PageTransition>{children}</PageTransition>
+          </main>
+          <Footer />
 
-            <ToasterContext />
-          </AuthProvider>
+          <ToasterContext />
         </div>
 
         <ScrollToTop />
+        <SubmarineCursor />
       </body>
     </html>
   );

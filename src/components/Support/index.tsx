@@ -32,7 +32,7 @@ const Support = () => {
             <span className="absolute left-1/2 top-0 -z-1 aspect-1170/592 w-full -translate-x-1/2">
               <Image
                 src="/images/blur/blur-20.svg"
-                alt="blur-sm"
+                alt=""
                 fill
                 className="max-w-none"
               />
@@ -40,7 +40,7 @@ const Support = () => {
             <span className="absolute left-1/2 top-0 -z-1 mx-auto aspect-530/254 w-full max-w-[530px] -translate-x-1/2">
               <Image
                 src="/images/blur/blur-21.svg"
-                alt="blur-sm"
+                alt=""
                 fill
                 className="max-w-none"
               />
@@ -48,9 +48,9 @@ const Support = () => {
           </div>
 
           <SectionTitle
-            subTitle="Need Any Help?"
-            title="Contact With Us"
-            paragraph="Build SaaS AI applications using OpenAI and Next.js, this kit comes with pre-configured and pre-built examples, making it easier to quickly kickstart your AI startup."
+            subTitle="Get In Touch"
+            title="Let's Work Together"
+            paragraph="Have a project in mind or just want to say hi? Send a message and I'll get back to you."
           />
 
           {/* <!-- support form --> */}
@@ -75,7 +75,7 @@ const Support = () => {
                       name="name"
                       placeholder="Enter your Name"
                       required
-                      className="w-full rounded-lg border border-white/[0.12] bg-white/[0.05] px-6 py-3 text-white outline-hidden focus:border-purple"
+                      className="w-full rounded-lg border border-white/[0.12] bg-white/[0.05] px-6 py-3 text-white outline-hidden transition-colors duration-300 focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-400/50"
                     />
                   </div>
                 </div>
@@ -93,7 +93,7 @@ const Support = () => {
                       name="email"
                       placeholder="Enter your Email"
                       required
-                      className="w-full rounded-lg border border-white/[0.12] bg-white/[0.05] px-6 py-3 text-white outline-hidden focus:border-purple"
+                      className="w-full rounded-lg border border-white/[0.12] bg-white/[0.05] px-6 py-3 text-white outline-hidden transition-colors duration-300 focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-400/50"
                     />
                   </div>
                 </div>
@@ -111,7 +111,7 @@ const Support = () => {
                       placeholder="Type your message"
                       rows={6}
                       required
-                      className="w-full rounded-lg border border-white/[0.12] bg-white/[0.05] px-6 py-5 outline-hidden focus:border-purple"
+                      className="w-full rounded-lg border border-white/[0.12] bg-white/[0.05] px-6 py-5 outline-hidden transition-colors duration-300 focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-400/50"
                     />
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const Support = () => {
                   <div className="text-center">
                     <button
                       type="submit"
-                      className="hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80"
+                      className="hero-button-gradient wave-button focus-ring inline-flex rounded-lg px-7 py-3 font-medium text-white hover:opacity-80"
                     >
                       Send Message
                     </button>
