@@ -2,10 +2,12 @@ import Image from "next/image";
 
 const Logo = ({
   stacked = false,
+  showText = true,
   imageClassName = "h-9 w-9 sm:h-11 sm:w-11",
   textClassName = "text-xl sm:text-2xl",
 }: {
   stacked?: boolean;
+  showText?: boolean;
   imageClassName?: string;
   textClassName?: string;
 }) => (
@@ -13,15 +15,19 @@ const Logo = ({
     className={`inline-flex items-center ${stacked ? "flex-col gap-3" : "gap-3"}`}
   >
     <Image
-      src={encodeURI("/Website logo.svg")}
+      src="/LogoWebsite-transparent.svg"
       alt=""
       width={80}
       height={80}
-      className={imageClassName}
+      className={`transition-transform duration-300 ease-portfolio group-hover:scale-105 ${imageClassName}`}
     />
-    <span className={`font-extrabold tracking-tight text-white ${textClassName}`}>
-      Hondra&apos;s <span className="text-blue-400">Portfolio</span>
-    </span>
+    {showText && (
+      <span
+        className={`font-extrabold tracking-tight text-white ${textClassName}`}
+      >
+        Hondra&apos;s <span className="text-blue-400">Portfolio</span>
+      </span>
+    )}
   </span>
 );
 

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} | Portfolio`,
+    title: `${project.title} | Hondra's Portfolio`,
     description: project.tagline,
   };
 }

@@ -1,5 +1,4 @@
 import AboutSection from "@/components/About/AboutSection";
-import Reveal from "@/components/Common/Reveal";
 import Hero from "@/components/Home/Hero";
 import SkillsScene from "@/components/Home/SkillsScene";
 import ProjectsScene from "@/components/Home/ProjectsScene";
@@ -9,7 +8,7 @@ import Support from "@/components/Support";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Hondra's Portfolio",
   description: "Full-stack developer portfolio",
   // other metadata
 };
@@ -19,33 +18,21 @@ export default function Home() {
     <>
       <Hero />
 
-      <Reveal>
-        <div className="flex min-h-[50vh] flex-col justify-center">
-          <AboutSection />
-        </div>
-      </Reveal>
+      <div className="flex min-h-[50vh] flex-col justify-center">
+        <AboutSection />
+      </div>
 
-      <Reveal>
-        <SkillsScene />
-      </Reveal>
+      <SkillsScene />
 
-      <Reveal>
-        <ProjectsScene />
-      </Reveal>
+      <ProjectsScene />
 
-      <Reveal>
-        <ExperienceScene />
-      </Reveal>
+      <ExperienceScene />
 
-      <Reveal>
-        <JourneyScene />
-      </Reveal>
+      <JourneyScene />
 
-      <Reveal>
-        <div className="flex min-h-[50vh] flex-col justify-center">
-          <Support />
-        </div>
-      </Reveal>
+      <div className="flex min-h-[50vh] flex-col justify-center">
+        <Support />
+      </div>
     </>
   );
 }

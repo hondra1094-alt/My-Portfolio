@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Page Not Found | Portfolio",
+  title: "Page Not Found | Hondra's Portfolio",
   description: "The page you're looking for doesn't exist.",
   // other metadata
 };

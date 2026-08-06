@@ -9,11 +9,11 @@ const Video = () => {
   return (
     <section className="pt-12">
       <div className="mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0">
-        <div className="relative z-999 aspect-39/20 rounded-3xl">
+        <div className="group relative z-999 aspect-39/20 overflow-hidden rounded-3xl border border-white/10 shadow-glass">
           <button
             aria-label="video play button"
             onClick={() => setToggler(!toggler)}
-            className="focus-ring absolute left-1/2 top-1/2 z-10 flex h-27.5 w-27.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-linear-to-b from-blue-500 to-blue-700 shadow-video"
+            className="focus-ring absolute left-1/2 top-1/2 z-10 flex h-27.5 w-27.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-linear-to-b from-blue-500 to-blue-700 shadow-video transition-transform duration-300 ease-portfolio group-hover:scale-105"
           >
             <svg
               width="30"
@@ -30,7 +30,12 @@ const Video = () => {
           </button>
           <span className="absolute left-1/2 top-1/2 z-1 block h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.04] backdrop-blur-[5px]"></span>
 
-          <Image src="/images/video/video.png" fill alt="video" />
+          <Image
+            src="/images/video/video.png"
+            fill
+            alt="video"
+            className="object-cover transition-transform duration-500 ease-portfolio group-hover:scale-105"
+          />
         </div>
       </div>
 

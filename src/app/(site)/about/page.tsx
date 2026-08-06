@@ -6,7 +6,7 @@ import Features from "@/components/Home/Features";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Portfolio",
+  title: "About | Hondra's Portfolio",
   description: "About page for the portfolio",
   // other metadata
 };
@@ -15,9 +15,7 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb pageTitle="About Page" />
-      <Reveal>
-        <AboutSection />
-      </Reveal>
+      <AboutSection />
       <Reveal>
         <Features />
       </Reveal>

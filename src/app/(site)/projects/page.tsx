@@ -5,7 +5,7 @@ import ProjectPreviewCard from "@/components/Projects/ProjectPreviewCard";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projects | Portfolio",
+  title: "Projects | Hondra's Portfolio",
   description: "Selected projects and case studies.",
 };
 
