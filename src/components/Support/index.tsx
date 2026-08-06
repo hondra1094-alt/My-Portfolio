@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { buttonClasses } from "@/libs/buttonClasses";
 import SectionTitle from "../Common/SectionTitle";
 
 const Support = () => {
   return (
     <section id="support" className="scroll-mt-17">
-      <div className="mx-auto max-w-[1104px] px-4 sm:px-8 xl:px-0">
-        <div className="relative z-999 overflow-hidden rounded-[30px] bg-dark px-4 pt-25 sm:px-20 lg:px-27.5">
+      <div className="mx-auto max-w-[1104px] px-5 sm:px-8 xl:px-0">
+        <div className="relative z-999 overflow-hidden rounded-[30px] bg-dark px-5 pt-12.5 sm:px-20 lg:px-27.5 lg:pt-16">
           {/* <!-- grid row --> */}
           <div className="absolute -top-[16%] left-1/2 -z-1 flex w-full max-w-[690px] -translate-x-1/2 justify-center gap-7.5 opacity-40">
             <div className="pricing-grid pricing-grid-border relative bottom-12 h-[250px] w-full max-w-[50px]"></div>
@@ -54,7 +55,7 @@ const Support = () => {
           />
 
           {/* <!-- support form --> */}
-          <div className="form-box-gradient relative overflow-hidden rounded-[25px] p-6 sm:p-8 xl:p-15">
+          <div className="form-box-gradient relative overflow-hidden rounded-[25px] p-6 sm:p-8 lg:p-12 xl:p-20">
             <form
               action="https://formbold.com/s/unique_form_id"
               method="POST"
@@ -62,7 +63,7 @@ const Support = () => {
             >
               <div className="-mx-4 flex flex-wrap xl:-mx-10">
                 <div className="w-full px-4 md:w-1/2 xl:px-5">
-                  <div className="mb-9.5">
+                  <div className="mb-9.5 lg:mb-12">
                     <label
                       htmlFor="name"
                       className="mb-2.5 block font-medium text-white"
@@ -80,7 +81,7 @@ const Support = () => {
                   </div>
                 </div>
                 <div className="w-full px-4 md:w-1/2 xl:px-5">
-                  <div className="mb-9.5">
+                  <div className="mb-9.5 lg:mb-12">
                     <label
                       htmlFor="email"
                       className="mb-2.5 block font-medium text-white"
@@ -98,7 +99,7 @@ const Support = () => {
                   </div>
                 </div>
                 <div className="w-full px-4 xl:px-5">
-                  <div className="mb-10">
+                  <div className="mb-10 lg:mb-14">
                     <label
                       htmlFor="message"
                       className="mb-2.5 block font-medium text-white"
@@ -119,7 +120,7 @@ const Support = () => {
                   <div className="text-center">
                     <button
                       type="submit"
-                      className="hero-button-gradient wave-button focus-ring inline-flex rounded-lg px-7 py-3 font-medium text-white hover:opacity-80"
+                      className={buttonClasses({ fullWidthOnMobile: true })}
                     >
                       Send Message
                     </button>

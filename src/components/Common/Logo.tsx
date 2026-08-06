@@ -1,22 +1,25 @@
-const Logo = () => (
-  <span className="inline-flex items-center gap-2">
-    <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M2 17c1.5 1.2 3 1.2 4.5 0s3-1.2 4.5 0 3 1.2 4.5 0 3-1.2 4.5 0"
-        stroke="currentColor"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-        className="text-blue-400"
-      />
-      <path
-        d="M2 12c1.5 1.2 3 1.2 4.5 0s3-1.2 4.5 0 3 1.2 4.5 0 3-1.2 4.5 0"
-        stroke="currentColor"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-        className="text-blue-400/50"
-      />
-    </svg>
-    <span className="text-lg font-extrabold tracking-tight text-white sm:text-xl">
+import Image from "next/image";
+
+const Logo = ({
+  stacked = false,
+  imageClassName = "h-9 w-9 sm:h-11 sm:w-11",
+  textClassName = "text-xl sm:text-2xl",
+}: {
+  stacked?: boolean;
+  imageClassName?: string;
+  textClassName?: string;
+}) => (
+  <span
+    className={`inline-flex items-center ${stacked ? "flex-col gap-3" : "gap-3"}`}
+  >
+    <Image
+      src={encodeURI("/Website logo.svg")}
+      alt=""
+      width={80}
+      height={80}
+      className={imageClassName}
+    />
+    <span className={`font-extrabold tracking-tight text-white ${textClassName}`}>
       Hondra&apos;s <span className="text-blue-400">Portfolio</span>
     </span>
   </span>

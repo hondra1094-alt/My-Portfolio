@@ -23,46 +23,44 @@ const Footer = () => {
           <div className="footer-bg-gradient h-[13px] w-full"></div>
         </div>
 
-        <div className="relative mx-auto max-w-[1170px] px-4 pt-17.5 sm:px-8 xl:px-0">
+        <div className="relative mx-auto max-w-3xl px-5 pt-17.5 text-center sm:px-8 xl:px-0">
           <div className="footer-divider-gradient absolute left-0 top-0 h-[1px] w-full"></div>
 
-          <div className="flex flex-wrap justify-between">
-            <div className="mb-10 w-full max-w-[520px]">
-              <Link
-                href="/"
-                className="focus-ring mb-8.5 inline-block rounded-md"
+          <Link
+            href="/"
+            className="focus-ring mb-8.5 inline-flex justify-center rounded-md"
+          >
+            <Logo
+              stacked
+              imageClassName="h-16 w-16 sm:h-20 sm:w-20"
+              textClassName="text-xl sm:text-2xl"
+            />
+          </Link>
+
+          <p className="mx-auto mb-10 max-w-lg">{profile.introduction}</p>
+
+          <div className="mb-12 flex items-center justify-center gap-5">
+            {profile.socials.map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="focus-ring rounded-md duration-300 ease-in hover:text-white"
               >
-                <Logo />
-              </Link>
-
-              <p className="mb-12 xl:w-4/5">{profile.introduction}</p>
-
-              <div className="flex items-center gap-5">
-                {profile.socials.map(({ label, href, icon: Icon }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className="focus-ring rounded-md duration-300 ease-in hover:text-white"
-                  >
-                    <Icon className="h-6 w-6 fill-current" />
-                  </a>
-                ))}
-              </div>
-
-              <p className="mt-5.5 font-medium">
-                © {year} {profile.name}. All rights reserved.
-              </p>
-            </div>
-
-            <div className="w-full max-w-[571px]">
-              <div className="flex flex-col gap-10 sm:flex-row sm:justify-between">
-                <FooterLinkList title="Navigate" links={navigateLinks} />
-              </div>
-            </div>
+                <Icon className="h-6 w-6 fill-current" />
+              </a>
+            ))}
           </div>
+
+          <div className="flex flex-col items-center">
+            <FooterLinkList title="Navigate" links={navigateLinks} />
+          </div>
+
+          <p className="mt-12 font-medium">
+            © {year} {profile.name}. All rights reserved.
+          </p>
         </div>
       </footer>
     </>

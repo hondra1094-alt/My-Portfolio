@@ -48,7 +48,7 @@ const ProjectPreviewCard = ({
         {project.tagline}
       </p>
 
-      <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-blue-300 opacity-0 transition-opacity duration-300 ease-portfolio group-hover:opacity-100 group-focus-visible:opacity-100">
+      <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-blue-300 opacity-100 transition-opacity duration-300 ease-portfolio group-focus-visible:opacity-100 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100">
         View Project
         <ArrowUpRightIcon className="h-4 w-4" />
       </span>

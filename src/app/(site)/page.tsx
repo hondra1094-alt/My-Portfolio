@@ -1,8 +1,10 @@
+import AboutSection from "@/components/About/AboutSection";
 import Reveal from "@/components/Common/Reveal";
-import Features from "@/components/Home/Features";
-import FeaturesList from "@/components/Home/FeaturesList";
 import Hero from "@/components/Home/Hero";
-import ResumePreview from "@/components/Home/ResumePreview";
+import SkillsScene from "@/components/Home/SkillsScene";
+import ProjectsScene from "@/components/Home/ProjectsScene";
+import ExperienceScene from "@/components/Home/ExperienceScene";
+import JourneyScene from "@/components/Home/JourneyScene";
 import Support from "@/components/Support";
 import { Metadata } from "next";
 
@@ -16,17 +18,33 @@ export default function Home() {
   return (
     <>
       <Hero />
+
       <Reveal>
-        <Features />
+        <div className="flex min-h-[50vh] flex-col justify-center">
+          <AboutSection />
+        </div>
       </Reveal>
+
       <Reveal>
-        <FeaturesList />
+        <SkillsScene />
       </Reveal>
+
       <Reveal>
-        <ResumePreview />
+        <ProjectsScene />
       </Reveal>
+
       <Reveal>
-        <Support />
+        <ExperienceScene />
+      </Reveal>
+
+      <Reveal>
+        <JourneyScene />
+      </Reveal>
+
+      <Reveal>
+        <div className="flex min-h-[50vh] flex-col justify-center">
+          <Support />
+        </div>
       </Reveal>
     </>
   );

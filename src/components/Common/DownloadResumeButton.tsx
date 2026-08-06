@@ -1,16 +1,18 @@
 import { DownloadIcon } from "@/assets/icons";
+import { buttonClasses } from "@/libs/buttonClasses";
 import { publicFileExists } from "@/libs/publicFile";
 import { resume } from "@/data/resume";
 
 const DownloadResumeButton = ({ className = "" }: { className?: string }) => {
   const available = publicFileExists(resume.fileUrl);
+  const classes = buttonClasses({ size: "md", className });
 
   if (!available) {
     return (
       <span
         aria-disabled="true"
         title={`Add public${resume.fileUrl} to enable downloads`}
-        className={`hero-button-gradient inline-flex cursor-not-allowed items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white opacity-40 ${className}`}
+        className={`${classes} cursor-not-allowed opacity-40`}
       >
         <DownloadIcon className="h-4 w-4" />
         Download Resume
@@ -19,11 +21,7 @@ const DownloadResumeButton = ({ className = "" }: { className?: string }) => {
   }
 
   return (
-    <a
-      href={encodeURI(resume.fileUrl)}
-      download
-      className={`hero-button-gradient wave-button focus-ring inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white hover:opacity-80 ${className}`}
-    >
+    <a href={encodeURI(resume.fileUrl)} download className={classes}>
       <DownloadIcon className="h-4 w-4" />
       Download Resume
     </a>

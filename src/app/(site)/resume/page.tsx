@@ -17,7 +17,7 @@ export default function ResumePage() {
       <Breadcrumb pageTitle="Resume" />
 
       <section className="pb-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-8 xl:px-0">
+        <div className="mx-auto max-w-4xl px-5 sm:px-8 xl:px-0">
           <div className="flex justify-center">
             <DownloadResumeButton />
           </div>

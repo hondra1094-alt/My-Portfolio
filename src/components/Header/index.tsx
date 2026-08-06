@@ -40,14 +40,12 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed left-0 top-0 z-1000 w-full ${
-          stickyMenu
-            ? "before:features-row-border bg-navy-950/80 py-4! shadow-sm backdrop-blur-lg transition duration-100 before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full lg:py-0!"
-            : "py-7 lg:py-0"
+        className={`before:features-row-border fixed left-0 top-0 z-1000 w-full bg-navy-950/80 shadow-sm backdrop-blur-lg transition-[padding] duration-300 before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full ${
+          stickyMenu ? "py-4! lg:py-3!" : "py-5 lg:py-4"
         }`}
       >
-        <div className="relative mx-auto max-w-[1170px] items-center justify-between px-4 sm:px-8 lg:flex xl:px-0">
-          <div className="flex w-full items-center justify-between lg:w-1/4">
+        <div className="relative mx-auto max-w-[1170px] items-center px-4 sm:px-8 lg:flex lg:justify-center lg:gap-16 xl:px-0">
+          <div className="flex w-full items-center justify-between lg:w-auto">
             <Link href="/" className="focus-ring rounded-md">
               <Logo />
             </Link>
@@ -57,7 +55,7 @@ const Header = () => {
               aria-label="Toggle navigation menu"
               aria-expanded={navigationOpen}
               aria-controls="primary-navigation"
-              className="focus-ring block rounded-md lg:hidden"
+              className="focus-ring block rounded-md p-2.5 lg:hidden"
             >
               <span className="relative block h-5.5 w-5.5 cursor-pointer">
                 <span className="du-block absolute right-0 h-full w-full">
@@ -95,7 +93,7 @@ const Header = () => {
 
           <div
             id="primary-navigation"
-            className={`invisible h-0 w-full items-center justify-between opacity-0 transition-opacity duration-300 ease-portfolio motion-reduce:transition-none lg:visible lg:flex lg:h-auto lg:w-3/4 lg:opacity-100 ${
+            className={`invisible h-0 w-full items-center opacity-0 transition-opacity duration-300 ease-portfolio motion-reduce:transition-none lg:visible lg:flex lg:h-auto lg:w-auto lg:opacity-100 ${
               navigationOpen
                 ? "visible! relative mt-4 h-auto! max-h-[400px] overflow-y-scroll rounded-md bg-navy-950 p-7.5 opacity-100! shadow-lg"
                 : ""
@@ -107,19 +105,14 @@ const Header = () => {
                   const active = isActivePath(pathUrl, menuItem.path);
 
                   return (
-                    <li
-                      key={key}
-                      className={`nav__menu group relative ${
-                        stickyMenu ? "lg:py-4" : "lg:py-7"
-                      }`}
-                    >
+                    <li key={key} className="nav__menu group relative lg:py-2">
                       {menuItem.submenu ? (
                         <DropDown menuItem={menuItem} />
                       ) : (
                         <Link
                           href={`${menuItem.path}`}
                           aria-current={active ? "page" : undefined}
-                          className={`focus-ring hover:nav-gradient relative border border-transparent px-4 py-1.5 text-sm transition-colors duration-300 ease-portfolio hover:text-white ${
+                          className={`focus-ring hover:nav-gradient relative block border border-transparent px-4 py-3 text-base transition-colors duration-300 ease-portfolio hover:text-white lg:py-1.5 lg:text-sm ${
                             active ? "nav-gradient text-white" : "text-white/80"
                           }`}
                         >

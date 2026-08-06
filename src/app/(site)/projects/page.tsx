@@ -15,7 +15,7 @@ export default function ProjectsPage() {
       <Breadcrumb pageTitle="Projects" />
 
       <section className="pb-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-8 xl:px-0">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8 xl:px-0">
           <Reveal className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <ProjectPreviewCard

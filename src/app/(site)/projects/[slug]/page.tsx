@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRightIcon, GithubIcon } from "@/assets/icons";
 import BentoCard from "@/components/Common/BentoCard";
+import ButtonLink from "@/components/Common/ButtonLink";
 import Breadcrumb from "@/components/Breadcrumb";
 import { projects } from "@/data/projects";
 import ProjectGallery from "./_components/ProjectGallery";
@@ -75,7 +76,7 @@ export default async function ProjectPage({ params }: Props) {
       <Breadcrumb pageTitle={project.title} />
 
       <section className="pb-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-8 xl:px-0">
+        <div className="mx-auto max-w-5xl px-5 sm:px-8 xl:px-0">
           {/* Hero image */}
           <div className="glass-card relative aspect-video overflow-hidden">
             {project.image ? (
@@ -111,28 +112,18 @@ export default async function ProjectPage({ params }: Props) {
               </p>
             </div>
 
-            <div className="flex flex-shrink-0 gap-3">
+            <div className="flex flex-col gap-3 sm:flex-shrink-0 sm:flex-row">
               {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="wave-button focus-ring inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-white hover:border-blue-400/40 hover:text-blue-300"
-                >
+                <ButtonLink href={project.githubUrl} variant="secondary" size="md">
                   <GithubIcon className="h-4 w-4" />
                   GitHub
-                </a>
+                </ButtonLink>
               )}
               {project.demoUrl && (
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hero-button-gradient wave-button focus-ring inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white duration-300 ease-in hover:opacity-80"
-                >
+                <ButtonLink href={project.demoUrl} size="md">
                   Live Demo
                   <ArrowUpRightIcon className="h-4 w-4" />
-                </a>
+                </ButtonLink>
               )}
             </div>
           </div>
@@ -184,12 +175,9 @@ export default async function ProjectPage({ params }: Props) {
               </span>
             </Link>
 
-            <Link
-              href="/"
-              className="wave-button focus-ring rounded-lg border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-white hover:border-blue-400/40 hover:text-blue-300"
-            >
+            <ButtonLink href="/" variant="secondary" size="md">
               Return to Portfolio
-            </Link>
+            </ButtonLink>
 
             <Link
               href={`/projects/${nextProject.slug}`}

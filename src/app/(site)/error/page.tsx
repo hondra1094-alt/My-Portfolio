@@ -1,8 +1,8 @@
 import Breadcrumb from "@/components/Breadcrumb";
+import ButtonLink from "@/components/Common/ButtonLink";
 
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Page Not Found | Portfolio",
@@ -17,7 +17,7 @@ const ErrorPage = () => {
 
       <section className="pb-20 pt-17.5 lg:pb-25 lg:pt-22.5 xl:pb-30 xl:pt-27.5 2xl:pb-[150px]">
         <div
-          className="wow fadeInUp mx-auto w-full max-w-[597px] px-4 text-center sm:px-8 lg:px-0"
+          className="wow fadeInUp mx-auto w-full max-w-[597px] px-5 text-center sm:px-8 lg:px-0"
           data-wow-delay="0.1s"
         >
           <div className="relative mx-auto mb-12.5 aspect-191/143 w-full max-w-[382px]">
@@ -30,12 +30,7 @@ const ErrorPage = () => {
             The page you are looking for is not available or has been moved. Try
             a different page or go to homepage with the button below.
           </p>
-          <Link
-            href="/"
-            className="hero-button-gradient wave-button focus-ring inline-flex rounded-lg px-7 py-3 font-medium text-white hover:opacity-80"
-          >
-            Go To Home
-          </Link>
+          <ButtonLink href="/">Go To Home</ButtonLink>
         </div>
       </section>
     </>
