@@ -108,6 +108,16 @@ const Header = () => {
                     <li key={key} className="nav__menu group relative lg:py-2">
                       {menuItem.submenu ? (
                         <DropDown menuItem={menuItem} />
+                      ) : menuItem.newTab ? (
+                        <a
+                          href={menuItem.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setNavigationOpen(false)}
+                          className="focus-ring hover:nav-gradient relative block border border-transparent px-4 py-3 text-base text-white/80 transition-colors duration-300 ease-portfolio hover:text-white lg:py-1.5 lg:text-sm"
+                        >
+                          {menuItem.title}
+                        </a>
                       ) : (
                         <Link
                           href={`${menuItem.path}`}

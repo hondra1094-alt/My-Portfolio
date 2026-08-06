@@ -1,4 +1,5 @@
 import { Menu } from "@/types/menu";
+import { resume } from "@/data/resume";
 
 const menuData: Menu[] = [
   {
@@ -22,8 +23,8 @@ const menuData: Menu[] = [
   {
     id: 4,
     title: "Resume",
-    newTab: false,
-    path: "/resume",
+    newTab: true,
+    path: encodeURI(resume.fileUrl),
   },
 ];
 export default menuData;
